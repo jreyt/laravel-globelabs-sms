@@ -2,7 +2,6 @@
 
 namespace Jreyt\Globelabs;
 
-
 use Globe\Connect\Sms;
 use Illuminate\Support\ServiceProvider;
 
@@ -24,7 +23,7 @@ class GlobeServiceProvider extends ServiceProvider
             $this->app->configure('globe');
         }
 
-        $this->mergeConfigFrom($source,'globe')
+        $this->mergeConfigFrom($source,'globe');
     }
 
     /**
@@ -34,6 +33,8 @@ class GlobeServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        $app = $this->app;
+        
         $sender = $app['config']['globe']['sender'];
         $app_id = $app['config']['globe']['app_id'];
         $app_secret = $app['config']['globe']['app_secret'];
@@ -43,7 +44,7 @@ class GlobeServiceProvider extends ServiceProvider
             return new Sms($sender,$app_id,$app_secret,$passphrase);
         });
 
-        $this->app->alias('globe' , Sms::class)
+        $this->app->alias('globe' , Sms::class);
     }
 
     public function provides()
