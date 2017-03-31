@@ -16,7 +16,7 @@
     },
     "autoload":{
     	"psr-4":{
-    		"Jreyt\\Globelabs\\":"src/Jreyt/"
+    		"Jreyt\\Globelabs\\":"src/"
     	}
     }
 }
