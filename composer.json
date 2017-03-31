@@ -1,0 +1,23 @@
+{
+    "name": "jreyt/laravel-globelabs-sms",
+    "description": "Laravel 5 wrapper for Globelabs SMS API",
+    "license": "MIT",
+    "keywords": ["laravel","globelabs","sms"],
+    "author":[
+    	{
+    	"name":"John Rey Tumbiga",
+    	"email": "johnrey.tumbiga@gmail.com"
+    	}
+	],
+    "minimum-stability": "dev",
+    "require": {
+        "illuminate/support": "^5.5@dev",
+        "globelabs/globe-connect-php": "*"
+
+    },
+    "autoload":{
+    	"psr-4":{
+    		"Jreyt\\Globelabs\\":"src/Jreyt/"
+    	}
+    }
+}
